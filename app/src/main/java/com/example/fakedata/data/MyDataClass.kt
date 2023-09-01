@@ -2,7 +2,6 @@ package com.example.fakedata.data
 
 import com.example.fakedata.FakeData
 import java.time.LocalDate
-import java.time.LocalDateTime
 
 /**
  * @author Du Wenyu
@@ -19,6 +18,7 @@ data class MyDataClass(
     companion object{
         fun test(){
 //            MyDataClass
+
         }
     }
 }
