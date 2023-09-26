@@ -4,10 +4,24 @@ package com.example.fakedata
  * @author Du Wenyu
  * 2023/9/1
  */
-@Target(AnnotationTarget.CLASS)
-annotation class FakeData(val withIndex: Boolean = false, val randomSuffix: Int = 0) {
-    companion object {
-        const val flexible = "withIndex"
-        const val randomSuffix = "randomSuffix"
+annotation class FakeData(
+    val stringOption: StringOption = StringOption(),
+    val booleanOption: BooleanOption = BooleanOption()
+)
+
+annotation class StringOption(
+    val prefix: String = "",
+    val suffix: String = "",
+    val mode: StringMode = StringMode.WithIndex
+) {
+    enum class StringMode {
+        WithIndex, RandomValue, Static;
+
+        fun generate(index: Int): String = StringDictionary.generate(this, index = index)
     }
 }
+
+annotation class BooleanOption(
+    val staticValue: Boolean = false,
+    val randomValue: Boolean = false
+)
