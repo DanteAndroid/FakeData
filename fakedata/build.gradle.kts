@@ -2,6 +2,7 @@ plugins {
     id("com.google.devtools.ksp")
     kotlin("jvm")
     id("maven-publish")
+    id("java-library")
 }
 
 dependencies {
@@ -20,4 +21,9 @@ afterEvaluate {
             }
         }
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
