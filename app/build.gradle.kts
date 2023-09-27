@@ -52,8 +52,8 @@ android {
 }
 
 dependencies {
-//    implementation("com.github.DanteAndroid:FakeData:0.12")
-//    ksp("com.github.DanteAndroid:FakeData:0.12")
+//    implementation("com.github.DanteAndroid:FakeData:0.15")
+//    ksp("com.github.DanteAndroid:FakeData:0.15")
     implementation(project(":fakedata"))
     ksp(project(":fakedata"))
     implementation("androidx.core:core-ktx:1.10.1")
