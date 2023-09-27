@@ -1,9 +1,7 @@
 plugins {
     id("com.google.devtools.ksp")
     kotlin("jvm")
-    `java-library`
-    `maven-publish`
-    signing
+    id("maven-publish")
 }
 
 dependencies {
@@ -14,7 +12,7 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            register("release", MavenPublication::class) {
+            create<MavenPublication>("release") {
                 from(components.findByName("release"))
                 groupId = "com.github.DanteAndroid"
                 artifactId = "FakeData"
