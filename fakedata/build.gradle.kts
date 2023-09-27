@@ -2,7 +2,6 @@ plugins {
     id("com.google.devtools.ksp")
     kotlin("jvm")
     id("maven-publish")
-    id("java-library")
 }
 
 dependencies {
@@ -17,13 +16,8 @@ afterEvaluate {
                 from(components.findByName("java"))
                 groupId = "com.github.DanteAndroid"
                 artifactId = "FakeData"
-                version = "0.25"
+                version = "0.26"
             }
         }
     }
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
