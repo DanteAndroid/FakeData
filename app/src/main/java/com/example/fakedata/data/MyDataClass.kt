@@ -23,7 +23,8 @@ data class MyDataClass(
 ){
     companion object{
         fun test(){
-
+            // After successful build
+            // You can call MyDataClassFake.xxx to get fake data now!
         }
     }
 }
