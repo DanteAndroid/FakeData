@@ -1,7 +1,9 @@
 plugins {
     id("com.google.devtools.ksp")
     kotlin("jvm")
+    `java-library`
     `maven-publish`
+    signing
 }
 
 dependencies {
@@ -16,7 +18,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.DanteAndroid"
                 artifactId = "FakeData"
-                version = "0.19"
+                version = "0.20"
             }
         }
     }
