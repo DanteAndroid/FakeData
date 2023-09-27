@@ -9,14 +9,12 @@ dependencies {
     implementation("com.google.devtools.ksp:symbol-processing-api:1.9.10-1.0.13")
 }
 
+
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("java") {
-                from(components.findByName("java"))
-                groupId = "com.github.DanteAndroid"
-                artifactId = "FakeData"
-                version = "0.26"
+            create<MavenPublication>("maven") {
+                from(components["java"])
             }
         }
     }
