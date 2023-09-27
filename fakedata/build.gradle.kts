@@ -17,7 +17,7 @@ afterEvaluate {
                 from(components.findByName("release"))
                 groupId = "com.github.DanteAndroid"
                 artifactId = "FakeData"
-                version = "0.23"
+                version = "0.24"
             }
         }
     }
