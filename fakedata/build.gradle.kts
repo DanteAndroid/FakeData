@@ -14,37 +14,36 @@ afterEvaluate {
         publications {
             register("release", MavenPublication::class) {
                 from(components.findByName("release"))
-//                groupId = "com.github.DanteAndroid"
-//                artifactId = "FakeData"
-//                version = "0.1"
-//
-//                pom {
-//                    name.value("FakeData")
-//                    description.value("Make faking data easy.")
-//                    url.value("https://github.com/DanteAndroid/FakeData")
-//
-//                    licenses {
-//                        license {
-//                            //协议类型
-//                            name.value("The MIT License")
-//                            url.value("https://github.com/DanteAndroid/FakeData/blob/master/LICENSE")
-//                        }
-//                    }
-//
-//                    developers {
-//                        developer {
-//                            id.value("DanteAndroid")
-//                            name.value("DanteAndroid")
-//                            email.value("danteandroi@gmail.com")
-//                        }
-//                    }
-//
-//                    scm {
-//                        connection.value("scm:git@github.com/DanteAndroid/FakeData.git")
-//                        developerConnection.value("scm:git@github.com/DanteAndroid/FakeData.git")
-//                        url.value("https://github.com/DanteAndroid/FakeData")
-//                    }
-//                }
+                groupId = "com.github.DanteAndroid"
+                artifactId = "FakeData"
+                version = "0.13"
+
+                pom {
+                    name.value("FakeData")
+                    description.value("Make faking data and preview Composable easy.")
+                    url.value("https://github.com/DanteAndroid/FakeData")
+
+                    licenses {
+                        license {
+                            name.value("The MIT License")
+                            url.value("https://github.com/DanteAndroid/FakeData/blob/master/LICENSE")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.value("DanteAndroid")
+                            name.value("DanteAndroid")
+                            email.value("danteandroi@gmail.com")
+                        }
+                    }
+
+                    scm {
+                        connection.value("scm:git@github.com/DanteAndroid/FakeData.git")
+                        developerConnection.value("scm:git@github.com/DanteAndroid/FakeData.git")
+                        url.value("https://github.com/DanteAndroid/FakeData")
+                    }
+                }
             }
         }
     }
