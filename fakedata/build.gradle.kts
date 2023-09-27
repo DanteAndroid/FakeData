@@ -13,11 +13,11 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") {
-                from(components.findByName("release"))
+            create<MavenPublication>("java") {
+                from(components.findByName("java"))
                 groupId = "com.github.DanteAndroid"
                 artifactId = "FakeData"
-                version = "0.24"
+                version = "0.25"
             }
         }
     }
